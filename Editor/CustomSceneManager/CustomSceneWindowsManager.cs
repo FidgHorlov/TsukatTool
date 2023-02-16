@@ -21,12 +21,18 @@ namespace TsukatTool.Editor.CustomSceneManager
         private const string PrepareBuildWindowName = "Prepare build";
 
         private const int WindowSizeMinX = 300;
-        private const int WindowSizeMinY = 200;
-        private const int WindowSizeMaxX = 200;
+        private const int WindowSizeMinY = 400;
+        private const int WindowSizeMaxX = 600;
         private const int WindowSizeMaxY = 720;
 
-        private const int SettingsWindowSizeYMin = 200;
+        private const int SettingsWindowSizeYMin = 150;
         private const int SettingsWindowSizeYMax = 600;
+        
+        private const int PrepareBuildWindowSizeYMin = 300;
+        private const int PrepareBuildWindowSizeYMax = 800;
+        
+        private const int PrepareBuildWindowSizeMinX = 600;
+        private const int PrepareBuildWindowSizeMaxX = 800;
 
         [MenuItem(SceneManagerPath, priority = -1000)]
         public static void OpenWindow()
@@ -43,9 +49,9 @@ namespace TsukatTool.Editor.CustomSceneManager
         {
             EditorWindow wnd = GetWindow<PrepareBuildWindow>();
             wnd.titleContent = new GUIContent(PrepareBuildWindowName);
-            wnd.minSize = new Vector2(WindowSizeMinX, SettingsWindowSizeYMin);
-            wnd.maxSize = new Vector2(WindowSizeMaxX, SettingsWindowSizeYMax);
-            wnd.position = new Rect(Screen.currentResolution.width / 2f, Screen.currentResolution.height / 2f, WindowSizeMinX, SettingsWindowSizeYMax);
+            wnd.minSize = new Vector2(PrepareBuildWindowSizeMinX, PrepareBuildWindowSizeYMin);
+            wnd.maxSize = new Vector2(PrepareBuildWindowSizeMaxX, PrepareBuildWindowSizeYMax);
+            wnd.position = new Rect(Screen.currentResolution.width / 2f, Screen.currentResolution.height / 2f, PrepareBuildWindowSizeMinX, WindowSizeMinY);
             wnd.Show(immediateDisplay: true);
         }
         
@@ -56,7 +62,7 @@ namespace TsukatTool.Editor.CustomSceneManager
             wnd.titleContent = new GUIContent(SettingsWindowName);
             wnd.minSize = new Vector2(WindowSizeMinX, SettingsWindowSizeYMin);
             wnd.maxSize = new Vector2(WindowSizeMaxX, SettingsWindowSizeYMax);
-            wnd.position = new Rect(Screen.currentResolution.width / 2f, Screen.currentResolution.height / 2f, WindowSizeMinX, SettingsWindowSizeYMax);
+            wnd.position = new Rect(Screen.currentResolution.width / 2f, Screen.currentResolution.height / 2f, WindowSizeMinX, SettingsWindowSizeYMin);
             wnd.Show(immediateDisplay: true);
         }
     }

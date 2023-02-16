@@ -17,20 +17,16 @@ namespace TsukatTool.Editor.CustomSceneManager
     public class SceneManagerWindow : EditorWindow
     {
         private const string ScenesHeader = "Here you can work with scenes";
-        
-        private const string ApplySettingsButtonName = "Apply scene settings";
-        private const string OpenSettingsButtonName = "Open global settings";
+
+        private const string ApplySettingsButtonName = "Apply";
+        private const string OpenSettingsButtonName = "Scene manager settings";
         private const string PrepareBuildButtonName = "Prepare build";
-        
+
         private const string TargetPlatformHeader = "Target Platform";
         private const string AddToMenuLabel = "Add to menu?";
         private const string AddToBuildLabel = "Add to build";
 
-        private const string ApplySceneSettingsHeader = "Would you like to apply settings?";
         private const string AddBuildFromSettingsLabel = "Add build targets from settings";
-
-        private const int ScrollScenesMaxHeight = 200;
-        private const int ScrollOffsetPositionX = 15;
 
         private TargetPlatformSettings _targetPlatformSettings;
         private ScenesSettings _scenesSettings;
@@ -45,7 +41,7 @@ namespace TsukatTool.Editor.CustomSceneManager
             SceneUpdate();
             OpenPrepareBuild();
         }
-        
+
         private void OnFocus()
         {
             _wasDictionaryInit = false;
@@ -69,7 +65,7 @@ namespace TsukatTool.Editor.CustomSceneManager
             }
 
             ScrollWithAllScenes();
-            
+
             EditorGUILayout.BeginHorizontal(EditorStyles.inspectorFullWidthMargins);
             CreateButton(ApplySettingsButtonName, AddAllScenesToBuildWindow);
             CreateButton(OpenSettingsButtonName, CustomSceneWindowsManager.OpenSettingsWindow);
@@ -79,11 +75,16 @@ namespace TsukatTool.Editor.CustomSceneManager
 
         private void ScrollWithAllScenes()
         {
-            EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-            EditorGUILayout.Space();
+            EditorGUILayout.BeginVertical(
+                EditorStyles.helpBox,
+                GUILayout.ExpandHeight(false),
+                GUILayout.ExpandWidth(true));
 
-            _scrollPosition = GUILayout.BeginScrollView(_scrollPosition, false, false, GUILayout.Width(position.width - ScrollOffsetPositionX),
-                GUILayout.Height(ScrollScenesMaxHeight));
+            _scrollPosition =
+                GUILayout.BeginScrollView(_scrollPosition,
+                    false,
+                    false,
+                    GUILayout.ExpandHeight(false));
 
             foreach (SceneData scene in _scenesSettings.ScenesData)
             {
@@ -185,7 +186,7 @@ namespace TsukatTool.Editor.CustomSceneManager
         {
             return _scenesSettings.ScenesData.FirstOrDefault(sceneData => sceneData.Path.Equals(scene.path));
         }
-        
+
         private void OpenPrepareBuild()
         {
             EditorGUILayout.BeginVertical();

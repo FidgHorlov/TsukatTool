@@ -14,13 +14,14 @@ namespace TsukatTool.Editor
 {
     public class FileManager
     {
-        private const string MultiToolSettingsPath = "Assets/TsukatTool/Editor/Settings/TargetPlatformSettings.settings";
-        private const string ScenesSettings = "Assets/TsukatTool/Editor/Settings/ScenesSettings.settings";
+        private const string MultiToolSettingsPath = "Packages/com.tsukat.tsukat.tool/Editor/Settings/TargetPlatformSettings.settings";
+        private const string ScenesSettings = "Packages/com.tsukat.tsukat.tool/Editor/Settings/ScenesSettings.settings";
 
-        private const string SceneLoaderTargetPath = "Assets/TsukatTool/Editor/CustomSceneLoader.cs";
-        private const string SceneLoaderTemplatePath = "Assets/TsukatTool/Editor/SceneLoader/SceneLoaderTemplate.template";
-        private const string MenuItemTemplatePath = "Assets/TsukatTool/Editor/SceneLoader/MenuItemTemplate.template";
+        private const string SceneLoaderTemplatePath = "Packages/com.tsukat.tsukat.tool/Editor/SceneLoader/SceneLoaderTemplate.template";
+        private const string MenuItemTemplatePath = "Packages/com.tsukat.tsukat.tool/Editor/SceneLoader/MenuItemTemplate.template";
         
+        private const string SceneLoaderTargetPath = "Assets/TsukatTool/Editor/CustomSceneLoader.cs";
+
         private const string GlobalTemplateMessage = "Can't find Global Template file\r\nPath: {0}";
         private const string MenuItemTemplateMessage = "Can't find MenuItem Template file\r\nPath: {0}";
 

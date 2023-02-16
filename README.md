@@ -13,4 +13,4 @@ If you have any questions please contact me:
 ahorlov@tsukat.com
 andreygorlovv@gmail.com
 
-Copyright (c) [2023] [Andrii Horlov]
+<i> Copyright (c) 2023. Andrii Horlov </i>

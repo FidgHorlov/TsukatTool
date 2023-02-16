@@ -1,0 +1,6 @@
+﻿        [MenuItem("Tsukat/Load scene/{0}")]
+        private static void LoadScene{0}()
+        {
+            EditorSceneManager.OpenScene("{1}");
+        }
+    

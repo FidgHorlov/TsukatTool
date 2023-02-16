@@ -1,0 +1,17 @@
+﻿#region Info
+
+// Tsukat tool - by Horlov Andrii (andreygorlovv@gmail.com)
+// Tsukat -> https://tsukat.com/
+
+#endregion
+
+using UnityEditor;
+using UnityEditor.SceneManagement;
+
+namespace TsukatTool.Editor
+{
+    public class CustomSceneLoader
+    {
+        // Place for Menu Items
+    }
+}

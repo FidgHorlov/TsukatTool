@@ -1,0 +1,19 @@
+{
+  "name": "com.tsukat.tsukat.tool",
+  "version": "0.0.1",
+  "displayName": "Tsukat Tool",
+  "description": "This tool can help you to: \r\n\n1. Find missing objects in scenes.\r\n2. Work with scenes.\r\n3. By shortcuts add the Assets Detector Package",
+  "documentationUrl": "https://example.com/",
+  "keywords": [
+    "Custom Editor",
+    "TsukatTool",
+    "Scenes",
+    "Build preparation"
+  ],
+  "author": {
+    "name": "Andrii Horlov",
+    "email": "andreygorlovv@gmail.com",
+    "url": "https://www.tsukat.com"
+  },
+  "unity": "2021.3"
+}

@@ -1,10 +1,16 @@
-README.
+Hi there, my name is Andrii Horlov. I'm from TSUKAT. (www.tsukat.com)
 
-Copyright (c) [2023] [Andrii Horlov]
+Here you can see what our tools could make:
+This tool can help you to: 
 
-Hi there, my name is Andrii Horlov. I'm from www.tsukat.com. 
-I've need something like this and couldn't find anything, that's why I've decided to create it.  
+1. Find missing objects in scenes.
+2. Work with scenes.
+3. By shortcuts add the Assets Detector Package
+
+
 
 If you have any questions please contact me:
 ahorlov@tsukat.com
 andreygorlovv@gmail.com
+
+Copyright (c) [2023] [Andrii Horlov]

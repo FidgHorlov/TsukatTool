@@ -16,10 +16,8 @@ namespace TsukatTool.Editor
     public static class CustomPackageManager
     {
         private const string AssetUsageDetectorPath = "https://github.com/yasirkula/UnityAssetUsageDetector.git";
-        private const string TsukatToolPath = "";
 
         private const string AssetUsageDetectorUnityPath = "Tsukat/Add.../Asset Usage Detector";
-        private const string TsukatToolUnityPath = "Tsukat/Add.../Tsukat Tool";
 
         private const string AssetUsageDetectorName = "com.yasirkula.assetusagedetector";
         private const string TsukatToolName = "com.tsukat.tool";
@@ -37,16 +35,6 @@ namespace TsukatTool.Editor
             _currentPackageName = AssetUsageDetectorName;
         }
 
-        [MenuItem(TsukatToolUnityPath, false, -1)]
-        private static void AddTsukatTool()
-        {
-            _request = Client.List(offlineMode: true);
-            EditorApplication.update += Progress;
-            _currentPackageName = TsukatToolName;
-        }
-
-        private static AddRequest _listRequest2;
-
         private static void Progress()
         {
             if (!_request.IsCompleted)
@@ -62,7 +50,6 @@ namespace TsukatTool.Editor
                         return;
                     }
 
-                    _listRequest2 = Client.Add(AssetUsageDetectorPath);
                     EditorApplication.update += AddPackageProgress;
                     break;
                 case StatusCode.Failure:

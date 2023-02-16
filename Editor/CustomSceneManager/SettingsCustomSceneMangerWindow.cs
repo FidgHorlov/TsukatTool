@@ -19,9 +19,6 @@ namespace TsukatTool.Editor.CustomSceneManager
         private const string Header = "Select all build platform you will use";
         private const string HeaderNotSupportedPlatforms = "NOT SUPPORTED PLATFORMS:";
 
-        private const float ScrollOffsetPositionX = 15f;
-        private const float ScrollScenesMaxHeight = 400f;
-
         private TargetPlatformSettings _selectedBuildTargets;
         private List<CustomBuildTarget> _buildTargets;
         private List<CustomBuildTarget> _buildTargetsNotSupported;
@@ -39,10 +36,17 @@ namespace TsukatTool.Editor.CustomSceneManager
                 _wasInit = true;
             }
 
-            EditorGUILayout.BeginVertical(EditorStyles.helpBox);
-            _scrollPosition = GUILayout.BeginScrollView(_scrollPosition, false, false, GUILayout.Width(position.width - ScrollOffsetPositionX),
-                GUILayout.Height(ScrollScenesMaxHeight), GUILayout.MinHeight(100));
-            
+            EditorGUILayout.BeginVertical(EditorStyles.helpBox, 
+                GUILayout.ExpandHeight(false),
+                GUILayout.ExpandWidth(true));
+
+            _scrollPosition = GUILayout.BeginScrollView(
+                _scrollPosition,
+                false,
+                false,
+                GUILayout.ExpandHeight(false)
+            );
+
             foreach (CustomBuildTarget buildTarget in _buildTargets)
             {
                 buildTarget.IsSelected = EditorGUILayout.ToggleLeft(buildTarget.Name, buildTarget.IsSelected);
@@ -69,7 +73,7 @@ namespace TsukatTool.Editor.CustomSceneManager
                 Close();
             }
         }
-        
+
         void IHasCustomMenu.AddItemsToMenu(GenericMenu menu)
         {
             string nameOfContextMenu = _lockNotSupportedPlatforms ? "Unlock" : "Lock";

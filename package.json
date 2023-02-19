@@ -1,10 +1,10 @@
 {
-  "name": "com.tsukat.tsukat.tool",
+  "name": "com.tsukat.multitool",
   "version": "0.0.1",
   "displayName": "Tsukat Tool",
   "description": "This tool can help you to: \r\n\n1. Find missing objects in scenes.\r\n2. Work with scenes.\r\n3. By shortcuts add the Assets Detector Package",
   "documentationUrl": "https://github.com/FidgHorlov/TsukatTool/wiki",
-  "changelogUrl": "https://github.com/FidgHorlov/TsukatTool",
+  "changelogUrl": "https://github.com/FidgHorlov/TsukatTool/releases",
   "licensesUrl": "https://github.com/FidgHorlov/TsukatTool/blob/main/LICENCE.md",
   "keywords": [
     "Custom Editor",

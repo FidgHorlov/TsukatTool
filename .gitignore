@@ -58,3 +58,13 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# TsukatTool Ignore list
+[E]editor/Settings/
+[E]editor/Settings.meta
+
+[E]editor/Settings/TargetPlatformSettings.settings
+[E]editor/Settings/TargetPlatformSettings.settings.meta
+
+[E]editor/Settings/ScenesSettings.settings
+[E]editor/Settings/ScenesSettings.settings.meta
+

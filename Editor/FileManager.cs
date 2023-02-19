@@ -14,11 +14,11 @@ namespace TsukatTool.Editor
 {
     public class FileManager
     {
-        private const string MultiToolSettingsPath = "Packages/com.tsukat.tsukat.tool/Editor/Settings/TargetPlatformSettings.settings";
-        private const string ScenesSettings = "Packages/com.tsukat.tsukat.tool/Editor/Settings/ScenesSettings.settings";
+        private const string MultiToolSettingsPath = "Packages/com.tsukat.multitool/Editor/Settings/TargetPlatformSettings.settings";
+        private const string ScenesSettings = "Packages/com.tsukat.multitool/Editor/Settings/ScenesSettings.settings";
 
-        private const string SceneLoaderTemplatePath = "Packages/com.tsukat.tsukat.tool/Editor/SceneLoader/SceneLoaderTemplate.template";
-        private const string MenuItemTemplatePath = "Packages/com.tsukat.tsukat.tool/Editor/SceneLoader/MenuItemTemplate.template";
+        private const string SceneLoaderTemplatePath = "Packages/com.tsukat.multitool/Editor/SceneLoader//SceneLoaderTemplate.template";
+        private const string MenuItemTemplatePath = "Packages/com.tsukat.multitool/Editor/SceneLoader/MenuItemTemplate.template";
         
         private const string SceneLoaderTargetPath = "Assets/TsukatTool/Editor/CustomSceneLoader.cs";
 

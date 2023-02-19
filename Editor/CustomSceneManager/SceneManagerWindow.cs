@@ -167,8 +167,11 @@ namespace TsukatTool.Editor.CustomSceneManager
                 {
                     sceneData = GetSceneDataIfExist(scene);
                 }
+                else
+                {
+                    sceneData = CreateNewSceneData(scene);    
+                }
 
-                sceneData ??= CreateNewSceneData(scene);
                 if (_targetPlatformSettings != null)
                 {
                     sceneData.TargetPlatformSettings.BuildTargets = GetNewBuildTargets(sceneData);

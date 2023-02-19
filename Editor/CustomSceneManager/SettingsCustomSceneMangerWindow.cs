@@ -19,6 +19,8 @@ namespace TsukatTool.Editor.CustomSceneManager
         private const string Header = "Select all build platform you will use";
         private const string HeaderNotSupportedPlatforms = "NOT SUPPORTED PLATFORMS:";
 
+        private const string SettingChangedPrefsName = "IsSettingChanged";
+        
         private TargetPlatformSettings _selectedBuildTargets;
         private List<CustomBuildTarget> _buildTargets;
         private List<CustomBuildTarget> _buildTargetsNotSupported;
@@ -36,7 +38,7 @@ namespace TsukatTool.Editor.CustomSceneManager
                 _wasInit = true;
             }
 
-            EditorGUILayout.BeginVertical(EditorStyles.helpBox, 
+            EditorGUILayout.BeginVertical(EditorStyles.helpBox,
                 GUILayout.ExpandHeight(false),
                 GUILayout.ExpandWidth(true));
 
@@ -70,7 +72,8 @@ namespace TsukatTool.Editor.CustomSceneManager
                 _selectedBuildTargets.BuildTargets = _buildTargets.FindAll(t => t.IsSelected).ToArray();
 
                 FileManager.ReWriteTargetPlatforms(_selectedBuildTargets);
-                Close();
+                EditorPrefs.SetBool(SettingChangedPrefsName, true);
+                FocusWindowIfItsOpen<SceneManagerWindow>();
             }
         }
 

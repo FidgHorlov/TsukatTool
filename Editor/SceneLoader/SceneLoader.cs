@@ -5,6 +5,7 @@
 
 #endregion
 
+using System;
 using System.Linq;
 using TsukatTool.Editor.CustomSceneManager;
 using UnityEditor;
@@ -26,7 +27,10 @@ namespace TsukatTool.Editor.SceneLoader
             string allMenuItems = "";
             foreach (SceneData scene in sceneDataList)
             {
-                if (!scene.IsCustomSceneLoader) continue;
+                if (!scene.IsCustomSceneLoader)
+                {
+                    continue;
+                }
 
                 string menuItemTemplate = FileManager.GetMenuItemTemplate();
                 allMenuItems += EditTemplateName(menuItemTemplate, scene.Name);
@@ -35,6 +39,7 @@ namespace TsukatTool.Editor.SceneLoader
             
             if (string.IsNullOrEmpty(allMenuItems))
             {
+                FileManager.ReWriteSceneLoader(string.Empty);
                 return;
             }
             
